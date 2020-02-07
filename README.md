@@ -1,2 +1,2 @@
 # MemoryEater
-A simple Android that chews up memory, designed to demo the memory monitor tool in Android Studio.
+A simple Android app that chews up memory, designed to demo the Android Profiler in Android Studio.
