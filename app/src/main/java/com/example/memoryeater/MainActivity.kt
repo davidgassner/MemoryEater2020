@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             job = Job()
         }
         // Create the coroutine scope and launch the code.
-        CoroutineScope(job + Dispatchers.Main).launch {
+        CoroutineScope(job + Dispatchers.Default).launch {
 
             for (i in 1..1000) {
 
