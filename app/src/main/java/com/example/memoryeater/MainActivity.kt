@@ -7,6 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * This version of the app is a bit different from the version shown in the course. There are
+ * now two versions: this one in the master branch uses the legacy AsyncTask architecture to
+ * add items to memory in a background thread. Switch to the "coroutines" branch for a version
+ * that uses Kotlin coroutines.
+ *
+ * VCS > Git > Branches, then check out the coroutines branch from the remote repo
+ *
+ * Try profiling memory usage with both versions and see if there's a difference.
+ */
 class MainActivity : AppCompatActivity() {
 
     private val mData = mutableListOf<String>()
