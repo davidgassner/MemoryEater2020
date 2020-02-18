@@ -8,7 +8,7 @@ import kotlinx.coroutines.*
 class MainActivity : AppCompatActivity() {
 
     private val mData = mutableListOf<String>()
-    private lateinit var job: Job
+    private var job = Job()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,11 @@ class MainActivity : AppCompatActivity() {
      */
     private fun eatMemory() {
 
-        job = Job()
+        // If the current job has already been used, create a new one.
+        if (job.isCompleted) {
+            job = Job()
+        }
+        // Create the coroutine scope and launch the code.
         CoroutineScope(job + Dispatchers.Main).launch {
 
             for (i in 1..1000) {
