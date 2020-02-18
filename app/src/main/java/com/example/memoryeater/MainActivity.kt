@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 
+/**
+ * In this updated version of the memory eater app, AsyncTask has been replaced with
+ * Kotlin coroutines.
+ */
 class MainActivity : AppCompatActivity() {
 
     private val mData = mutableListOf<String>()
@@ -28,10 +32,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    /**
-     * In this updated version of the memory eater app, AsyncTask has been replaced with
-     * Kotlin coroutine. Items are added to memory in a background thread.
-     */
     private fun eatMemory() {
 
         // If the current job has already been used, create a new one.
